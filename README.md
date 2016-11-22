@@ -1,26 +1,9 @@
-# Sample PHP Code for Authorize.Net
-[![Build Status](https://travis-ci.org/AuthorizeNet/sample-code-php.png?branch=master)]
-(https://travis-ci.org/AuthorizeNet/sample-code-php)
+# Sample PHP Code for Authorize.Net AIM
+You need to run the composer(composer.json included) to add the dependency code. 
+This is an example how you can utilize the Authorize.net AIM integration method.
+Additionally, included the constants directory and file, which you might not get with composer setup.
+You need to change the MERCHANT_LOGIN_ID and MERCHANT_TRANSACTION_KEY constants in constants/Constants.php file.
 
-This repository contains working code samples which demonstrate PHP integration with the Authorize.Net PHP SDK.
-The samples are organized just like our API, which you can also try out directly here: http://developer.authorize.net/api/reference
-
-
-##Using the Sample Code
-
-The samples are all completely independent and self-contained so you can look at them to get a gist of how the method works, you can use the snippets to try in your own sample project, or you can run each sample from the command line.
-
-##Running the Samples
-Clone this repository.  
-Run "composer update" in the root directory.  
-Run the individual samples e.g.   
-````
-php PaymentTransactions/charge-credit-card.php
-````
-
-##What if I'm not using Composer?
-We provide a custom `SPL` autoloader, just [download the SDK.](https://github.com/AuthorizeNet/sdk-php/releases):
-
-```php
-require 'path/to/anet_php_sdk/autoload.php';
-```
+After adding the dependency, run the index.html file. Provide the information asked in the form.
+Hitting the Submit button will make the mock transaction and you should receive Transaction Response code : 1 in the response.
+And you should receive a test merchant email receipt on your registered email address.
